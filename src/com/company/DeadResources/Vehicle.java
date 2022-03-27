@@ -1,6 +1,7 @@
 package com.company.DeadResources;
 
 import java.time.LocalDate;
+import java.time.Period;
 import java.util.*;
 
 public abstract class Vehicle {
@@ -37,7 +38,9 @@ public abstract class Vehicle {
         Optional<Double> optionalDouble = Optional.ofNullable(price);
         return optionalDouble.isPresent() ? optionalDouble.toString() : "EMPTY";
     }
-
+    private static int countForHowLong(Vehicle v){
+        return Period.between(v.getDateOfPurchase(), LocalDate.now()).getYears();
+    }
     public String getBrand() {
         return brand;
     }

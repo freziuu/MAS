@@ -57,9 +57,10 @@ public class Main {
         bmwM5.getMapOfMilages();
             System.out.println("-------------------------");
 // atr. klasowy
-
+        System.out.println(Sport.getMinHorsePower());
 
 // atr. pochodny
+
 
 // met. klaswowa
 
