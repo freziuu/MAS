@@ -5,6 +5,8 @@ public class Employee extends Person{
         super(name, surname, gender, age, adress, phoneNumber, email);
     }
 
+
+
     @Override
     public String toString() {
         return "Employee{" +

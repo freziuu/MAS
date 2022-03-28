@@ -1,10 +1,13 @@
 package com.company.DeadResources;
 
+import com.company.ObjectPlus;
+import com.company.ObjectPlusPlus;
+
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.*;
 
-public abstract class Vehicle {
+public abstract class Vehicle extends ObjectPlusPlus {
     private static int numberOfVehicles = 1; // not sure if correct
     private String brand;
     private String model;
@@ -18,6 +21,7 @@ public abstract class Vehicle {
 
 
     public Vehicle(String brand, String model, int year, double milage, int numberOfSeats, LocalDate dateOfPurchase, Double priceForDay) {
+        super();
         this.brand = brand;
         this.model = model;
         this.year = year;
@@ -33,6 +37,7 @@ public abstract class Vehicle {
     public void getMapOfMilages(){
         System.out.println(mapOfMilage);
     }
+
 
     public String checkIfPriceIsNull(Double price){
         Optional<Double> optionalDouble = Optional.ofNullable(price);

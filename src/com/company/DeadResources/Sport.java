@@ -1,9 +1,10 @@
 package com.company.DeadResources;
 
+import com.company.ObjectPlus;
 import com.company.TooSlowException;
 
 import java.time.LocalDate;
-import java.util.Date;
+import java.util.Comparator;
 
 public class Sport extends Vehicle{
     private Integer horsePower;
@@ -20,6 +21,11 @@ public class Sport extends Vehicle{
 
     public static void setMinHorsePower(int minHorsePower) {
         Sport.minHorsePower = minHorsePower;
+    }
+
+    public static Sport findYoungestSportCar() throws ClassNotFoundException{
+        var students = ObjectPlus.getExtentOfClass(Sport.class);
+        return ObjectPlus.getExtentOfClass(Sport.class).stream().max(Comparator.comparing(Sport::getYear)).get();
     }
 
     @Override

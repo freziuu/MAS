@@ -1,6 +1,8 @@
 package com.company.HumanResources;
 
-abstract public class Person {
+import com.company.ObjectPlusPlus;
+
+abstract public class Person extends ObjectPlusPlus {
     private static int numberOfPersons = 1; // not sure if correct
     String name;
     String surname;
@@ -76,4 +78,16 @@ abstract public class Person {
     public void setEmail(String email) {
         this.email = email;
     }
+
+
+    public void givePromo() {
+    }
+
+    public void givePromo(int i) {
+    }
+
+    public int getPromo() {
+        return 0;
+    }
 }
+
