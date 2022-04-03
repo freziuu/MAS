@@ -30,6 +30,10 @@ public class Main {
 
 
     String nameOfSerializedFile = "mp1.bin";
+    notALocalDate GOWNO = new notALocalDate(13, 1,2012);
+
+
+
 
 // stworzenie przykładowych obiektów
         Person clientNew = new Client("Danda", "Bonk", "IDK", 59, "Marszalkowsa 21", "99833299", "asodkoa@wp.pl");
@@ -42,7 +46,8 @@ public class Main {
 
             System.out.println("-------------------------");
 
-// atr. złożony
+// atr. złożony nie moze byc lokaldate
+
         System.out.println("Atrybut złożony: " + bmwM5.getDateOfPurchase());
             System.out.println("-------------------------");
 
