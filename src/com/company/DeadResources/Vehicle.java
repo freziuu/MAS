@@ -2,7 +2,9 @@ package com.company.DeadResources;
 
 import com.company.ObjectPlus;
 import com.company.ObjectPlusPlus;
+import com.company.notALocalDate;
 
+import javax.management.openmbean.InvalidOpenTypeException;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.*;
@@ -13,14 +15,14 @@ public abstract class Vehicle extends ObjectPlusPlus {
     private String model;
     private int year;
     private final Map<LocalDate, Double> mapOfMilage = new TreeMap<>();
-    private LocalDate dateOfPurchase;
+    private notALocalDate dateOfPurchase;
     private Double priceForDay;
     private int numberOfSeats;
 
 
 
 
-    public Vehicle(String brand, String model, int year, double milage, int numberOfSeats, LocalDate dateOfPurchase, Double priceForDay) {
+    public Vehicle(String brand, String model, int year, double milage, int numberOfSeats, notALocalDate dateOfPurchase, Double priceForDay) {
         super();
         this.brand = brand;
         this.model = model;
@@ -44,7 +46,7 @@ public abstract class Vehicle extends ObjectPlusPlus {
         return optionalDouble.isPresent() ? optionalDouble.toString() : "EMPTY";
     }
     private static int countForHowLong(Vehicle v){
-        return Period.between(v.getDateOfPurchase(), LocalDate.now()).getYears();
+        return notALocalDate.between(v.getDateOfPurchase(), notALocalDate.now());
     }
     public String getBrand() {
         return brand;
@@ -72,11 +74,11 @@ public abstract class Vehicle extends ObjectPlusPlus {
 
 
 
-    public LocalDate getDateOfPurchase() {
+    public notALocalDate getDateOfPurchase() {
         return dateOfPurchase;
     }
 
-    public void setDateOfPurchase(LocalDate dateOfPurchase) {
+    public void setDateOfPurchase(notALocalDate dateOfPurchase) {
         this.dateOfPurchase = dateOfPurchase;
     }
 

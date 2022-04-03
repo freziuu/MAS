@@ -31,6 +31,7 @@ public class Main {
 
     String nameOfSerializedFile = "mp1.bin";
     notALocalDate GOWNO = new notALocalDate(13, 1,2012);
+        System.out.println(GOWNO.toString());
 
 
 
@@ -38,9 +39,9 @@ public class Main {
 // stworzenie przykładowych obiektów
         Person clientNew = new Client("Danda", "Bonk", "IDK", 59, "Marszalkowsa 21", "99833299", "asodkoa@wp.pl");
         Person empNew = new Employee("Vlad", "Durko", "idk", 21, "Dolna 2 ", "232323232", "ajdwoiadwo@gmail.com");
-        Vehicle bmwM5 = new Sport("BMW", "M5", 2021, 666.0, 5, LocalDate.of(2020, 12, 30), 1200.0, 301);
-        Vehicle bmwM3WithNull = new Sport("BMW", "M3", 2022, 202.0, 5, LocalDate.of(2021, 3, 2), null, 401);
-        Vehicle toyotaYaris = new ECO("Toyota", "Yaris", 2020, 3000.0, 4, LocalDate.of(2019, 4, 20), 500.0);
+        Vehicle bmwM5 = new Sport("BMW", "M5", 2021, 666.0, 5, new notALocalDate(31, 2,2020), 1200.0, 301);
+        Vehicle bmwM3WithNull = new Sport("BMW", "M3", 2022, 202.0, 5, new notALocalDate(12,10,2020), null, 401);
+        Vehicle toyotaYaris = new ECO("Toyota", "Yaris", 2020, 3000.0, 4, new notALocalDate(13,10,2002), 500.0);
 
         RentalAssistant test = new RentalAssistant(LocalDate.of(2000, 12, 20), LocalDate.of(2002, 12, 20), (Employee) empNew, (Client) clientNew, bmwM5, 40000.0);
 
