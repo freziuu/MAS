@@ -30,8 +30,7 @@ public class Main {
 
 
     String nameOfSerializedFile = "mp1.bin";
-    notALocalDate GOWNO = new notALocalDate(13, 1,2012);
-        System.out.println(GOWNO.toString());
+
 
 
 
@@ -45,37 +44,37 @@ public class Main {
 
         RentalAssistant test = new RentalAssistant(LocalDate.of(2000, 12, 20), LocalDate.of(2002, 12, 20), (Employee) empNew, (Client) clientNew, bmwM5, 40000.0);
 
-            System.out.println("-------------------------");
+            System.out.println("----------------------------------------------------------------------------------------------------------------------------------");
 
 // atr. złożony nie moze byc lokaldate
 
-        System.out.println("Atrybut złożony: " + bmwM5.getDateOfPurchase());
-            System.out.println("-------------------------");
+        System.out.println("Atrybut złożony: " + test.getClientWhoRent());
+            System.out.println("-----------atr. złożony --------------------------------------------------------");
 
 // atr. opcjonalny
         System.out.println(bmwM5.getPriceForDay());
         System.out.println(bmwM3WithNull.getPriceForDay());
         System.out.println(bmwM3WithNull);
-            System.out.println("-------------------------");
+            System.out.println("----------atr. opcjonalny-----------------------------------------------------------------------------");
 
 // atr. powtarzalny
         bmwM5.getMapOfMilages();
 
-        bmwM5.updateMilage(LocalDate.of(2020,12,11 ),1.0);
-        bmwM5.updateMilage(LocalDate.of(2020,12,5 ),2.0);
-        bmwM5.updateMilage(LocalDate.of(2020,12,4 ),3.0);
-        bmwM5.updateMilage(LocalDate.of(2020,12,3 ),4.0);
-        bmwM5.updateMilage(LocalDate.of(2020,12,2 ),5.0);
+        bmwM5.updateMilage(LocalDate.now(),1.0);
+        bmwM5.updateMilage(LocalDate.now().minusDays(20),2.0);
+        bmwM5.updateMilage(LocalDate.now().minusDays(40),3.0);
+        bmwM5.updateMilage(LocalDate.now().minusDays(60),4.0);
+        bmwM5.updateMilage(LocalDate.now().minusDays(80),888.0);
 
         bmwM5.getMapOfMilages();
-            System.out.println("-------------------------");
+            System.out.println("-------------------------------------------------------------------------------------------------------------");
 // atr. klasowy
         System.out.println(Sport.getMinHorsePower());
-            System.out.println("-------------------------");
+            System.out.println("---------atr. klasowy-------------------------------------------------------------------------------");
 // atr. pochodny
 
         test.getDays();
-            System.out.println("-------------------------");
+            System.out.println("--------atr. pochodny-----------------------------------------------------------------------------------------------------");
 // met. klaswowa
 
         try {
@@ -84,7 +83,7 @@ public class Main {
             e.printStackTrace();
         }
 
-        System.out.println("-------------------------");
+        System.out.println("-----------met. klaswowa-------------------------------------------------------------------------------------------------");
 
 // przeciazenie
 
@@ -93,12 +92,12 @@ public class Main {
     clientNew.givePromo(20);
         System.out.println(clientNew.getPromo());
 
-        System.out.println("-------------------------");
+        System.out.println("-----------przeciazenie--------------------------------------------------------------------------------------------------");
 // przysloniecie
 
         System.out.println(bmwM5.toString());
 
-        System.out.println("-------------------------");
+        System.out.println("-----------przysloniecie--------------------------------------------------------------------------------------------------");
 // serializacja
 
      System.out.println("Serializacja ekstensji:");

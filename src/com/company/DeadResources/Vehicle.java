@@ -1,12 +1,9 @@
 package com.company.DeadResources;
 
-import com.company.ObjectPlus;
 import com.company.ObjectPlusPlus;
 import com.company.notALocalDate;
 
-import javax.management.openmbean.InvalidOpenTypeException;
 import java.time.LocalDate;
-import java.time.Period;
 import java.util.*;
 
 public abstract class Vehicle extends ObjectPlusPlus {

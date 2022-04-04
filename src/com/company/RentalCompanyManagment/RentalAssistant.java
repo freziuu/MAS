@@ -44,6 +44,63 @@ public class RentalAssistant extends ObjectPlusPlus implements Serializable {
         numbersOfRents++;
 
     }
+
+    public LocalDate getRentalFromDate() {
+        return rentalFromDate;
+    }
+
+    public void setRentalFromDate(LocalDate rentalFromDate) {
+        this.rentalFromDate = rentalFromDate;
+    }
+
+    public LocalDate getRentalToDate() {
+        return rentalToDate;
+    }
+
+    public void setRentalToDate(LocalDate rentalToDate) {
+        this.rentalToDate = rentalToDate;
+    }
+
+    public Employee getEmployeeWhoRent() {
+        return employeeWhoRent;
+    }
+
+    public void setEmployeeWhoRent(Employee employeeWhoRent) {
+        this.employeeWhoRent = employeeWhoRent;
+    }
+
+    public Client getClientWhoRent() {
+        return clientWhoRent;
+    }
+
+    public void setClientWhoRent(Client clientWhoRent) {
+        this.clientWhoRent = clientWhoRent;
+    }
+
+    public Vehicle getVehicleWhichRent() {
+        return vehicleWhichRent;
+    }
+
+    public void setVehicleWhichRent(Vehicle vehicleWhichRent) {
+        this.vehicleWhichRent = vehicleWhichRent;
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
+    public boolean isContainInsurance() {
+        return containInsurance;
+    }
+
+    public void setContainInsurance(boolean containInsurance) {
+        this.containInsurance = containInsurance;
+    }
+
     public void getDays(){
         System.out.println(DAYS.between(this.rentalFromDate, this.rentalToDate));
     }

@@ -24,7 +24,7 @@ public class Sport extends Vehicle{
     }
 
     public static Sport findYoungestSportCar() throws ClassNotFoundException{
-        var students = ObjectPlus.getExtentOfClass(Sport.class);
+        var cars = ObjectPlus.getExtentOfClass(Sport.class);
         return ObjectPlus.getExtentOfClass(Sport.class).stream().max(Comparator.comparing(Sport::getYear)).get();
     }
 
